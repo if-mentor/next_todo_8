@@ -1,34 +1,117 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Todo リスト作成チーム開発（第 8 期）
+## 開発メンバー
 
-## Getting Started
+- 参加メンバー（担当）:
+- リーダー:
 
-First, run the development server:
+## 使用技術
 
-```bash
-npm run dev
-# or
-yarn dev
+- React.js (https://github.com/facebook/react)
+- Next.js (https://github.com/vercel/next.js)
+- TypeScript
+
+## 推奨 VScode 拡張機能
+
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph&ssr=false#qna) コミットの一覧 → 詳細を閲覧できる
+- [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) ファイルの履歴などを確認できる
+- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
+※ おすすめしたいものがあれば適宜追加する
+
+## バージョン情報
+
+volta で管理、volta 以外をお使いの方は自身で以下のバージョンにあわせてください。
+https://volta.sh/
+
+```
+"node": "16.13.2",
+"yarn": "1.22.19"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## プロジェクトの概要
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Todo リストの作成を通じて、React.js、Next.js の基礎、Git,github の使い方に慣れ、チーム開発を体験する。
+チームメンバー同士でのコードレビュー、毎週 MTG での issue やデザインについての議論など個人開発では行えない内容をカバーしていきます。
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 環境構築手順
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. `git clone https://github.com/if-mentor/next_todo_8.git`
+2. **github アカウントを 2 つ以上持っている方のみ、確認**
+   - clone したリポジトリのディレクトリに移動
+   - `git config --list`を実行する
+   - vscode で github と連携をおこなっているユーザー名がプロジェクトに招待してもらっているユーザー名と同じになっているか確認
+   - 同じになっていない場合は、ログインを変更する（※方法がわからない場合は、ジュンペイに連絡すること）
+3. リポジトリのディレクトリへ移動
+4. `yarn` // package の install
+5. `yarn dev `
 
-## Learn More
+   上記を実行し、`http://localhost:3000/`
+   以下の画像の画面が表示できるか確認をお願いします。
 
-To learn more about Next.js, take a look at the following resources:
+   ![image](https://user-images.githubusercontent.com/24813936/148723807-3b3e571b-6669-4d1c-a96f-d623f9650e09.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 開発 Tips
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 1. プルリクエスト前の作業
 
-## Deploy on Vercel
+プルリクエストを上げる前に必ず、自分が作業を行なっているブランチで`git pull origin main`を行うこと
+もし、コンフリクトが発生したら、ローカル上で解決する、解決の仕方がわからない場合は、メンバーに相談すること
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. `git pull origin main`を行なった後の作業
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+remote に変更があった場合は、`git pull origin main`のコマンドを実行し、remote の変更を取り込む
+package に更新がないか、確認するため、`yarn`コマンドを実行する
+`success Already up-to-date.`と表示されれば OK。
+
+### 3. プルリクのレビュー後のマージについて
+
+プルリクエストを作成し、レビューが終わった後は、マージを github 上で行ってください。
+もし、この際に github 上でコンフリクトが発生していることがわかった場合は、ローカル環境で
+`git pull origin main`を行い、ローカル環境でコンフリクトを解消するようにしてください。
+
+---
+
+## 自主的な貢献を歓迎
+
+チームにとっていいことを考え行動してくれる方を尊重します。
+やりたいことや試してみたいことなどを自主的に提案していただき、どんどんチーム開発を盛り上げていきましょう！
+基本的にはチームとして行いたいものを自由にやってもらうスタンスで進めていきます。
+
+### Issue の作成
+
+自主的な貢献の一環として、Issue の作成は各自で自由に作成して、構いません。
+ルールとして、作成した Issue を必ず開発 MTG で提案し、いつ対応するのかをチームで決めましょう。
+また、Issue とすべきか、曖昧な場合は、Discussion に内容を記述し、メンバーから意見をもらいましょう。
+
+### Git/gitHub
+
+毎週 MTG の際にメンバーの中で翌週のプルリクに対して、レビュワーを 2 人以上決めて、順番に回していく。
+レビュワーが足りない場合は、チームメンバー全員でレビューを行うようにする。
+コードに対して、批評をするのではなく、自分がわからないコードや理解できないコードを質問するようにレビューを進めることで
+実装者のレベルは関係なくレビューを行っていけるかと思います。
+明らかに実装に問題がある場合は、指摘しましょう。
+
+#### ブランチ命名規則
+
+issue 番号を必ず含める
+
+**＜具体例＞**
+issue#３ Todo の作成画面の実装の場合
+
+`git checkout -b '#3-Todo-Page-Layout'`
+
+#### コミットメッセージ
+
+#issue 番号 + プレフィックス + 日本語で端的に
+
+- **プレフィックス**をつける
+  - add: 機能追加
+  - fix: バグ修正
+  - config: 設定
+  - refactor: リファクタリング
+  - docs:ドキュメント
+  - chore: その他環境構築など雑用
+
+例）
+`git commit -m '#3 refactor: Todo作成画面のレイアウト調整' `

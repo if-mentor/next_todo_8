@@ -8,14 +8,14 @@
 
 - React.js (https://github.com/facebook/react)
 - Next.js (https://github.com/vercel/next.js)
-- TypeScript
+- TypeScript (https://www.typescriptlang.org/)
 
 ## 推奨 VScode 拡張機能
 
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph&ssr=false#qna) コミットの一覧 → 詳細を閲覧できる
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) ファイルの履歴などを確認できる
-- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
-- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) コメントに「TODO」とつけるとtodoリストとして記録できる
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) 視覚的にリポジトリ、ブランチ、ファイル、コミットの状態を確認や操作することができる
 
 ※ おすすめしたいものがあれば適宜追加する
 
@@ -44,7 +44,9 @@ Todo リストの作成を通じて、React.js、Next.js の基礎、Git,github 
    - 同じになっていない場合は、ログインを変更する（※方法がわからない場合は、ジュンペイに連絡すること）
 3. リポジトリのディレクトリへ移動
 4. `yarn`
+    
     package.jsonにある各パッケージの install
+    
 5. `yarn dev `
 
    上記を実行し、`http://localhost:3000/`

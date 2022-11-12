@@ -43,7 +43,8 @@ Todo リストの作成を通じて、React.js、Next.js の基礎、Git,github 
    - vscode で github と連携をおこなっているユーザー名がプロジェクトに招待してもらっているユーザー名と同じになっているか確認
    - 同じになっていない場合は、ログインを変更する（※方法がわからない場合は、ジュンペイに連絡すること）
 3. リポジトリのディレクトリへ移動
-4. `yarn` // package の install
+4. `yarn`
+    package.jsonにある各パッケージの install
 5. `yarn dev `
 
    上記を実行し、`http://localhost:3000/`

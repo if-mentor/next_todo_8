@@ -1,6 +1,6 @@
 import {Heading, Button} from "@chakra-ui/react";
 
-function HomePage() {
+const HomePage = () => {
   return (
     <>
       <Heading>Welcome to Next.js!</Heading>

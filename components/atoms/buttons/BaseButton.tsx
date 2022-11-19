@@ -10,7 +10,7 @@ type Props = {
 const BaseButton = ({backgroundColor, fontColor, borderColor, children}: Props) => {
   return (
     <Button background={backgroundColor} color={fontColor} rounded="full" border='1px' borderColor={borderColor}
-            py={'6'}>{children}</Button>
+            px={'6'}>{children}</Button>
   );
 };
 

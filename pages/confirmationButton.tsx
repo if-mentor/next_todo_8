@@ -1,23 +1,39 @@
 import { Center } from "@chakra-ui/react";
-import BaseButton from "../components/atoms/buttons/BaseButton";
+import { BackButton } from "../components/atoms/buttons/BackButton";
+import { CommentButton } from "../components/atoms/buttons/CommentButton";
+import { CreateButton } from "../components/atoms/buttons/CreateButton";
+import { DeleteAllButton } from "../components/atoms/buttons/DeleteAllButton";
+import { DoingButton } from "../components/atoms/buttons/DoingButton";
+import { DoneButton } from "../components/atoms/buttons/DoneButton";
+import { DraftButton } from "../components/atoms/buttons/DraftButton";
+import { LoginButton } from "../components/atoms/buttons/LoginButton";
+import { NotStartedButto } from "../components/atoms/buttons/NotStartedButton";
+import { ResetButton } from "../components/atoms/buttons/ResetButton";
+import { RestoreAllButton } from "../components/atoms/buttons/RestoreAllButton";
+import { SignUpButton } from "../components/atoms/buttons/SignUpButton";
+import { TopButton } from "../components/atoms/buttons/TopButton";
+import { UpdateButton } from "../components/atoms/buttons/UpdateButton";
 
 const ConfirmationButton = () => {
   return (
     <>
       <Center mt={"4"}>
-        <BaseButton backgroundColor={"green.50"}>NOT STARTED</BaseButton>
-        <BaseButton backgroundColor={"green.500"} fontColor={"white"}>DOING</BaseButton>
-        <BaseButton backgroundColor={"green.200"}>DONE</BaseButton>
-        <BaseButton backgroundColor={"red.300"} fontColor={'white'} borderColor={'white'}>Delete all</BaseButton>
-        <BaseButton backgroundColor={"blue.300"} fontColor={'white'} borderColor={'white'}>Restore All</BaseButton>
-        <BaseButton backgroundColor={"green.200"}>Back</BaseButton>
-        <BaseButton backgroundColor={'blackAlpha.400'}>RESET</BaseButton>
+        <NotStartedButto />
+        <DoingButton />
+        <DoneButton />
+        <DeleteAllButton />
+        <RestoreAllButton />
+        <BackButton />
+        <ResetButton />
       </Center>
       <Center mt={"9"}>
-        <BaseButton backgroundColor={'pink.100'}>DRAFT</BaseButton>
-        <BaseButton backgroundColor={"green.500"} fontColor={"white"}>CREATE</BaseButton>
-        <BaseButton backgroundColor={"green.500"} fontColor={"white"}>UPDATE</BaseButton>
-        <BaseButton backgroundColor={"green.500"} fontColor={"white"}>Comment</BaseButton>
+        <DraftButton />
+        <CreateButton />
+        <UpdateButton />
+        <CommentButton />
+        <SignUpButton />
+        <LoginButton />
+        <TopButton />
       </Center>
     </>
   );

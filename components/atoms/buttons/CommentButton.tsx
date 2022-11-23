@@ -3,13 +3,14 @@ import { Button } from "@chakra-ui/react";
 export const CommentButton = () => {
   return (
     <Button
-      _hover={{ bg: "green.500" }}
-      backgroundColor={"green.500"}
+      _hover={{ bg: "#28ADCA" }}
+      backgroundColor={"#28ADCA"}
       rounded="full"
       border="1px"
       color={"white"}
-      px={"6"}
+      px={"8"}
       borderColor={"black"}
+      w={"100px"}
     >
       Comment
     </Button>

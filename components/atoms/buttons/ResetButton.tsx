@@ -7,8 +7,9 @@ export const ResetButton = () => {
       backgroundColor={"blackAlpha.400"}
       rounded="full"
       border="1px"
-      px={"6"}
+      px={"8"}
       borderColor={"black"}
+      w={'100px'}
     >
       RESET
     </Button>

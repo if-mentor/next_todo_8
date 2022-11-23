@@ -7,8 +7,9 @@ export const DraftButton = () => {
       backgroundColor={"pink.100"}
       rounded="full"
       border="1px"
-      px={"6"}
+      px={"8"}
       borderColor={"black"}
+      w={"100px"}
     >
       DRAFT
     </Button>

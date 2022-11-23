@@ -3,13 +3,13 @@ import { Button } from "@chakra-ui/react";
 export const DoingButton = () => {
   return (
     <Button
-      _hover={{ bg: "green.500" }}
-      backgroundColor={"green.500"}
+      _hover={{ bg: "#95E3F4" }}
+      backgroundColor={"#95E3F4"}
       rounded="full"
       border="1px"
-      color={"white"}
-      px={"6"}
+      px={"8"}
       borderColor={"black"}
+      w={'100px'}
     >
       DOING
     </Button>

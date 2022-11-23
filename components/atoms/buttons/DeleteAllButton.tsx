@@ -3,13 +3,14 @@ import { Button } from "@chakra-ui/react";
 export const DeleteAllButton = () => {
   return (
     <Button
-      _hover={{ bg: "red.300" }}
-      backgroundColor={"red.300"}
+      _hover={{ bg: "#E28F84" }}
+      backgroundColor={"#E28F84"}
       rounded="full"
       border="1px"
       color={"white"}
-      px={"6"}
+      px={"8"}
       borderColor={"white"}
+      w={"100px"}
     >
       Delete All
     </Button>

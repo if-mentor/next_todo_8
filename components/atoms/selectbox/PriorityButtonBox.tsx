@@ -8,7 +8,7 @@ const PriorityButtonBox: React.FC= () => {
       <Select
         height="40px"
         width="112px"
-        borderColor="#E53E3E"
+        borderColor="#30494F"
         fontSize="16px"
       >
         <option value='High'>High</option>

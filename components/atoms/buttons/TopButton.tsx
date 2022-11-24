@@ -3,13 +3,15 @@ import { Button } from "@chakra-ui/react";
 export const TopButton = () => {
   return (
     <Button
-      _hover={{ bg: "pink.100" }}
-      backgroundColor={"pink.100"}
+      _hover={{ bg: "#E28F84" }}
+      backgroundColor={"#E28F84"}
       rounded="full"
       border="1px"
-      px={"8"}
-      borderColor={"black"}
-      w={"100px"}
+      color={"blackAlpha.800"}
+      borderColor={'blackAlpha.800'}
+      w={"112px"}
+      fontSize={"18px"}
+      fontWeight={"bold"}
     >
       TOP
     </Button>

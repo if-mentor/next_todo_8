@@ -8,9 +8,9 @@ export const RestoreAllButton = () => {
       rounded="full"
       border="1px"
       color={"white"}
-      px={"8"}
-      borderColor={"white"}
-      w={"100px"}
+      w={"112px"}
+      fontSize={"18px"}
+      fontWeight={'bold'}
     >
       Restore All
     </Button>

@@ -7,9 +7,10 @@ export const BackButton = () => {
       backgroundColor={"#95E3F4"}
       rounded="full"
       border="1px"
-      px={"8"}
-      borderColor={"black"}
-      w={"100px"}
+      color={"blackAlpha.800"}
+      w={"104px"}
+      fontSize={"18px"}
+      fontWeight={"bold"}
     >
       Back
     </Button>

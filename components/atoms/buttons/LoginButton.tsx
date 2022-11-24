@@ -7,10 +7,13 @@ export const LoginButton = () => {
       backgroundColor={"#28ADCA"}
       rounded="full"
       border="1px"
-      color={"white"}
       px={"10"}
       borderColor={"none"}
-      w={"100px"}
+      w={"204px"}
+      fontSize={"24px"}
+      h={'54px'}
+      color={"#F0FCFF"}
+      fontWeight={"bold"}
     >
       LOGIN
     </Button>

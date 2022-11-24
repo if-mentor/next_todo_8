@@ -8,9 +8,10 @@ export const CommentButton = () => {
       rounded="full"
       border="1px"
       color={"white"}
-      px={"8"}
-      borderColor={"black"}
-      w={"100px"}
+      borderColor={'blackAlpha.800'}
+      w={"112px"}
+      fontSize={"18px"}
+      fontWeight={"bold"}
     >
       Comment
     </Button>

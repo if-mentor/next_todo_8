@@ -7,9 +7,10 @@ export const DoneButton = () => {
       backgroundColor={"#28ADCA"}
       rounded="full"
       border="1px"
-      px={"8"}
-      borderColor={"black"}
-      w={"100px"}
+      color={"blackAlpha.800"}
+      w={"104px"}
+      fontSize={"18px"}
+      fontWeight={"bold"}
     >
       DONE
     </Button>

@@ -7,10 +7,10 @@ export const NotStartedButto = () => {
       backgroundColor={"#F0FCFF"}
       rounded="full"
       border="1px"
-      px={"8"}
-      borderColor={"black"}
-      w={'100px'}
-      fontSize={'12px'}
+      color={"#023945"}
+      w={"104px"}
+      fontSize={"12px"}
+      fontWeight={'bold'}
     >
       NOT STARTED
     </Button>

@@ -7,10 +7,11 @@ export const UpdateButton = () => {
       backgroundColor={"#40D2F1"}
       rounded="full"
       border="1px"
-      color={"white"}
-      px={"8"}
-      borderColor={"black"}
-      w={"100px"}
+      color={"#F0FCFF"}
+      borderColor={'blackAlpha.800'}
+      w={"112px"}
+      fontSize={"18px"}
+      fontWeight={"bold"}
     >
       UPDATE
     </Button>

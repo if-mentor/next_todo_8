@@ -8,9 +8,9 @@ export const DeleteButton= () => {
       rounded="full"
       border="1px"
       color={"white"}
-      px={"8"}
-      borderColor={"white"}
-      w={"100px"}
+      w={"80px"}
+      fontSize={"18px"}
+      fontWeight={'bold'}
     >
       Delete
     </Button>

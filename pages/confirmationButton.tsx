@@ -15,7 +15,8 @@ import { SignUpButton } from "../components/atoms/buttons/SignUpButton";
 import { TopButton } from "../components/atoms/buttons/TopButton";
 import { UpdateButton } from "../components/atoms/buttons/UpdateButton";
 import { DeleteButton } from "../components/atoms/buttons/DeleteButton";
-import {RestoreButton } from "../components/atoms/buttons/RestoreButton";
+import { RestoreButton } from "../components/atoms/buttons/RestoreButton";
+import { CommentCreateButton } from "../components/atoms/buttons/CommentCreateButton";
 
 const ConfirmationButton = () => {
   return (
@@ -28,18 +29,25 @@ const ConfirmationButton = () => {
         <RestoreAllButton />
         <BackButton />
         <ResetButton />
-        <DeleteButton />
-        <RestoreButton />
       </Center>
       <Center mt={"9"}>
+        <DeleteButton />
+        <RestoreButton />
         <DraftButton />
         <CreateButton />
         <UpdateButton />
         <CommentButton />
-        <SignUpButton />
-        <LoginButton />
         <TopButton />
+      </Center>
+      <Center mt={"9"}>
+        <LoginButton />
+        <SignUpButton />
+      </Center>
+      <Center mt={"9"}>
         <GoogleLoginButton />
+      </Center>
+      <Center mt={"9"}>
+        <CommentCreateButton />
       </Center>
     </>
   );

@@ -7,8 +7,11 @@ export const GoogleLoginButton = () => {
       backgroundColor={"#8BACB4"}
       rounded="full"
       border="1px"
-      px={"10"}
-      color={"white"}
+      w={"427px"}
+      fontSize={"24px"}
+      h={"54px"}
+      color={"#F0FCFF"}
+      fontWeight={"bold"}
     >
       GOOGLE LOGIN
     </Button>

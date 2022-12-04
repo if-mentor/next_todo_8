@@ -12,13 +12,13 @@ export const FormArea = () => {
       <Box
         w={"750px"}
         bg={"#C8F5FF"}
-        mt={"70px"}
+        mt={"68px"}
         borderRadius={"40px"}
-        px={"70px"}
+        px={"75px"}
         pt={"44px"}
       >
         <Box mb={"40px"}>
-          <Center w={"195px"} bg={"#F0FCFF"} borderRadius="40px" mb={"36px"}>
+          <Center w={"195px"} bg={"#F0FCFF"} borderRadius="40px" mb={"26px"}>
             <Text color={"#28ADCA"} fontSize={"24px"} fontWeight={"bold"}>
               EMAIL
             </Text>
@@ -28,7 +28,7 @@ export const FormArea = () => {
           </Center>
         </Box>
         <Box mb={"40px"}>
-          <Center w={"195px"} bg={"#F0FCFF"} borderRadius="40px" mb={"36px"}>
+          <Center w={"195px"} bg={"#F0FCFF"} borderRadius="40px" mb={"26px"}>
             <Text color={"#28ADCA"} fontSize={"24px"} fontWeight={"bold"}>
               PASSWORD
             </Text>

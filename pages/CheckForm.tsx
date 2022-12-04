@@ -4,6 +4,7 @@ import TextBox from "../components/atoms/Forms/TextBox";
 import TextBox2 from "../components/atoms/Forms/TextBox2";
 import TextBox3 from "../components/atoms/Forms/TextBox3";
 import TextSmallBox from "../components/atoms/Forms/TextSmallBox";
+import RoundedCornersTextBox from "../components/atoms/Forms/RoundedCornersTextBox";
 
 const CheckForm =()=>{
 
@@ -18,6 +19,7 @@ const CheckForm =()=>{
         <TextBox2/>
         <TextBox3/>
         <TextSmallBox/>
+        <RoundedCornersTextBox/>
       </Stack>
       </Flex>
     </>

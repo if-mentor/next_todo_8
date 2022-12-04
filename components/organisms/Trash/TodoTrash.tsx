@@ -11,7 +11,6 @@ import {NotStartedButton} from "../../atoms/buttons/NotStartedButton";
 import {DoingButton} from "../../atoms/buttons/DoingButton";
 import {DoneButton} from "../../atoms/buttons/DoneButton";
 
-
 const TodoTrash:FC = () => {
 
   const TrashTable = (props: TableProps) => {

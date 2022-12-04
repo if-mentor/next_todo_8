@@ -50,9 +50,9 @@ const TodoTrashRow: FC<Props> = (props) => {
             <PriorityButtonBox />
           </TrashWhiteCell>
           <TrashWhiteCell>{create}</TrashWhiteCell>
-          <TrashWhiteCell>
-            <RestoreButton />
+          <TrashWhiteCell> 
             <DeleteButton />
+            <RestoreButton />
           </TrashWhiteCell>
         </Tr>
       </TrashTbody>

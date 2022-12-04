@@ -14,9 +14,17 @@ import {DoneButton} from "../../atoms/buttons/DoneButton";
 const TodoTrash:FC = () => {
 
   const TrashTable = (props: TableProps) => {
-    return <Table maxW="1080px" maxH="392px" minW="1080px" minH="392px"
-     m="168px 100px 0 100px"  {...props} />;
-  };
+  return (
+    <Table  
+      maxW="1080px"  
+      maxH="392px" 
+      minW="1080px" 
+      minH="392px" 
+      m="168px 100px 0 100px" 
+      {...props} 
+    />
+  )
+};
 
   return (
     <>

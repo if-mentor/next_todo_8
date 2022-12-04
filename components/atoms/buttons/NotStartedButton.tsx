@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react";
 
-export const NotStartedButto = () => {
+export const NotStartedButton = () => {
   return (
     <Button
       _hover={{ bg: "#F0FCFF" }}

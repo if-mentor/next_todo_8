@@ -1,11 +1,11 @@
 import React from 'react'
 import { DoingButton } from '../components/atoms/buttons/DoingButton'
 import { DoneButton } from '../components/atoms/buttons/DoneButton'
-import { NotStartedButto } from '../components/atoms/buttons/NotStartedButton'
 import ToppageListHead from '../components/organisms/ToppageListHead'
 import ToppageListLine from '../components/organisms/ToppageListLine'
 
 import { TableContainer, Table } from '@chakra-ui/react'
+import { NotStartedButton } from '../components/atoms/buttons/NotStartedButton'
 
 const confirmationToppageListLine: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const confirmationToppageListLine: React.FC = () => {
         <Table variant="simple">
           <ToppageListHead />
           <ToppageListLine 
-            status={<NotStartedButto />}
+            status={<NotStartedButton />}
             task="Github上に静的サイトをホスティングする"
             create="2022-11-11 12:12"
             update="2022-12-11 12:12"

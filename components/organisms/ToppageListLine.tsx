@@ -1,6 +1,8 @@
 import React from 'react'
-import { Tbody, Tr, Td } from '@chakra-ui/react'
+import { Tbody, Tr, Td, Center } from '@chakra-ui/react'
 import PriorityButtonBox from '../atoms/selectbox/PriorityButtonBox'
+import ActionIconEdit from '../atoms/icons/ActionIconEdit'
+import ActionIconDelete from '../atoms/icons/ActionIconDelete'
 
 type Props = {
   task: string,
@@ -15,11 +17,11 @@ const ToppageListLine = ({task, status, create, update}:Props) => {
       <Tbody>
         <Tr>
           <Td fontSize="16px" fontWeight="700" p={"16px 12px"}>{task}</Td>
-          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}>{status}</Td>
-          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><PriorityButtonBox /></Td>
-          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}>{create}</Td>
-          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}>{update}</Td>
-          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}>ﾎﾞﾀﾝ1 ﾎﾞﾀﾝ2</Td>
+          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center>{status}</Center></Td>
+          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center><PriorityButtonBox /></Center></Td>
+          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center>{create}</Center></Td>
+          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center>{update}</Center></Td>
+          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center><ActionIconEdit />　<ActionIconDelete></ActionIconDelete></Center></Td>
         </Tr>
       </Tbody>
     </>

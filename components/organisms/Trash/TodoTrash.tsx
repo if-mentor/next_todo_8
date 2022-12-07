@@ -20,7 +20,7 @@ const TodoTrash:FC = () => {
       maxH="392px" 
       minW="1080px" 
       minH="392px" 
-      m="168px 100px 0 100px" 
+      ml="100px" 
       {...props} 
     />
   )

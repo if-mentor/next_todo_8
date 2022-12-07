@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Box, TableContainer, Table, Center, Flex, Text, Spacer, Input, InputGroup, InputRightElement, Wrap, WrapItem, HStack, VStack } from "@chakra-ui/react";
+import { Heading, Box, TableContainer, Table, Flex, Text, Spacer, HStack} from "@chakra-ui/react";
 
 import { DoingButton } from "../components/atoms/buttons/DoingButton";
 import { DoneButton } from "../components/atoms/buttons/DoneButton";
@@ -10,15 +10,10 @@ import TrashIcon from '../components/atoms/icons/TrashIcon';
 import DraftIcon from '../components/atoms/icons/DraftIcon';
 import TextAreaBox from '../components/atoms/selectbox/TextAreaBox';
 import { ResetButton } from '../components/atoms/buttons/ResetButton';
-import { BsSearch } from 'react-icons/bs';
 import SerchInputArea from '../components/atoms/serchInputArea/SerchInputArea';
 import FooterNumberButton from '../components/atoms/footerButton/FooterNumberButton';
 import FooterNumberPlusButton from '../components/atoms/footerButton/FooterNumberPlusButton';
 import FooterNumberMinusButton from '../components/atoms/footerButton/FooterNumberMinusButton';
-
-
-
-
 
 const todoTop = () => {
   return (
@@ -30,7 +25,6 @@ const todoTop = () => {
       {/* ここまで */}
 
       <Flex  justify='center' align='center'>
-
         <Flex w="1080px" m="16px 0px">
           <Text fontSize="28px" fontWeight="700">TODO LIST</Text>
           <Spacer />
@@ -44,29 +38,23 @@ const todoTop = () => {
       </Flex>
       <Flex justify='center' align='center'>
         <Box minW="1080px" w="1080px">
-          
-
-
-        <HStack pb="33px">
-          <Box pr="24px">
-            <Text fontSize="18px">SEARCH</Text>
-            <SerchInputArea />
-          </Box>
-          <Box pr="24px">
-            <Text fontSize="18px">STATUS</Text>
-            <TextAreaBox value1="NOT STARTED" value2="DOING" value3="DONE"/>
-          </Box>
-          <Box pr="24px">
-            <Text fontSize="18px">PROPRITY</Text>
-            <TextAreaBox value1="High" value2="Middle" value3="Low"/>
-          </Box>
-          <Flex h="67px" alignItems="flex-end">
+          <HStack pb="33px">
+            <Box pr="24px">
+              <Text fontSize="18px">SEARCH</Text>
+              <SerchInputArea />
+            </Box>
+            <Box pr="24px">
+              <Text fontSize="18px">STATUS</Text>
+              <TextAreaBox value1="NOT STARTED" value2="DOING" value3="DONE"/>
+            </Box>
+            <Box pr="24px">
+              <Text fontSize="18px">PROPRITY</Text>
+              <TextAreaBox value1="High" value2="Middle" value3="Low"/>
+            </Box>
+            <Flex h="67px" alignItems="flex-end">
               <ResetButton />
-
- 
-
-          </Flex>
-        </HStack>
+            </Flex>
+          </HStack>
         </Box>
       </Flex>
 

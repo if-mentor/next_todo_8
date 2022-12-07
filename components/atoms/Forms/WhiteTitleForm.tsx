@@ -1,6 +1,6 @@
 import InputBox from "./accessories/InputBox";
 
-const TextBox2 =()=>{
+const WhiteTitleForm =()=>{
   return(
     <InputBox w="1080px"
     h="71px"
@@ -10,4 +10,4 @@ const TextBox2 =()=>{
   )
 }
 
-export default TextBox2;
+export default WhiteTitleForm;

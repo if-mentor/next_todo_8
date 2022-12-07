@@ -19,8 +19,8 @@ const ToppageListLine = ({task, status, create, update}:Props) => {
           <Td fontSize="16px" fontWeight="700" p={"16px 12px"}>{task}</Td>
           <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center>{status}</Center></Td>
           <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center><PriorityButtonBox /></Center></Td>
-          <Td fontSize="16px" fontWeight="700" p={"16px 0px"}><Center>{create}</Center></Td>
-          <Td fontSize="16px" fontWeight="700" p={"16px 0px"}><Center>{update}</Center></Td>
+          <Td fontSize="14px" fontWeight="700" p={"16px 0px"}><Center>{create}</Center></Td>
+          <Td fontSize="14px" fontWeight="700" p={"16px 0px"}><Center>{update}</Center></Td>
           <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center><ActionIconEdit />　<ActionIconDelete></ActionIconDelete></Center></Td>
         </Tr>
       </Tbody>

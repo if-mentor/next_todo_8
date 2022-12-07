@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { GoogleLoginButton } from "../atoms/buttons/GoogleLoginButton";
 import { LoginButton } from "../atoms/buttons/LoginButton";
 import { SignUpButton } from "../atoms/buttons/SignUpButton";
-import RoundedCornersTextBox from "../atoms/forms/RoundedCornersTextBox";
+import RoundedCornersTextBox from "../atoms/Forms/RoundedCornersTextBox";
 
 export const FormArea = () => {
   const router = useRouter();

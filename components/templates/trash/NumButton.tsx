@@ -1,10 +1,6 @@
 import { Center } from "@chakra-ui/react";
 
-<<<<<<< HEAD
 export const NumButton1 = () => {
-=======
-export const NumButtonFirst = () => {
->>>>>>> e61cecd856f5dcd404e713ccab4a67e56d4080b3
   return (
     <>
       <Center
@@ -19,11 +15,7 @@ export const NumButtonFirst = () => {
     </>
   );
 };
-<<<<<<< HEAD
 export const NumButton2 = () => {
-=======
-export const NumButtonSecond = () => {
->>>>>>> e61cecd856f5dcd404e713ccab4a67e56d4080b3
   return (
     <>
       <Center
@@ -38,11 +30,7 @@ export const NumButtonSecond = () => {
     </>
   );
 };
-<<<<<<< HEAD
 export const NumButton3 = () => {
-=======
-export const NumButtonPoint = () => {
->>>>>>> e61cecd856f5dcd404e713ccab4a67e56d4080b3
   return (
     <>
       <Center
@@ -57,11 +45,7 @@ export const NumButtonPoint = () => {
     </>
   );
 };
-<<<<<<< HEAD
 export const NumButton5 = () => {
-=======
-export const NumButtonFifth = () => {
->>>>>>> e61cecd856f5dcd404e713ccab4a67e56d4080b3
   return (
     <>
       <Center
@@ -76,11 +60,7 @@ export const NumButtonFifth = () => {
     </>
   );
 };
-<<<<<<< HEAD
 export const NumButton6 = () => {
-=======
-export const NumButtonSixth = () => {
->>>>>>> e61cecd856f5dcd404e713ccab4a67e56d4080b3
   return (
     <>
       <Center

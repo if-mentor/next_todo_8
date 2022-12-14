@@ -9,7 +9,7 @@ import { DoneButton } from "../../atoms/buttons/DoneButton";
 export const TodoTrash: React.FC = () => {
   const TrashTable = (props: TableProps) => {
     return (
-      <Table maxW="1080px" maxH="392px" minW="1080px" minH="392px" {...props} />
+      <Table m='0 auto' maxW="1080px" maxH="392px" minW="1080px" minH="392px" {...props} />
     );
   };
 

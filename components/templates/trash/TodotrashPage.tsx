@@ -4,22 +4,13 @@ import { RestoreAllButton } from "../../atoms/buttons/RestoreAllButton";
 import { BackButton } from "../../atoms/buttons/BackButton";
 import { GreyButton, NumButtonFirst, NumButtonSecond, NumButtonPoint, NumButtonFifth, NumButtonSixth, WhiteButton } from "./NumButton";
 import { TodoTrash } from "../../organisms/Trash/TodoTrash";
+import { Header } from "../../organisms/Header";
 
 export const TodotrashPage = () => {
   return (
     <>
-      <Box maxW="1280px" minW="1280px">
-        {/* Header コンポーネント*/}
-        <Box
-          maxW="1280px"
-          minW="1280px"
-          maxH="80px"
-          minH="80px"
-          bg="#95E3F4"
-          textAlign="left"
-        >
-          Todo
-        </Box>
+      <Box>
+        <Header />
 
         <Flex mb="39px">
           <Box

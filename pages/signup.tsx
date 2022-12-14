@@ -1,12 +1,10 @@
-import { Heading, Box } from "@chakra-ui/react";
+import { Header } from "../components/organisms/Header";
 import { FormArea } from "../components/organisms/FormArea";
 
 const SignUp = () => {
   return (
     <>
-      <Box px={10} py={5} bg="#95E3F4">
-        <Heading ml={10}>TODO</Heading>
-      </Box>
+      <Header />
       <FormArea />
     </>
   );

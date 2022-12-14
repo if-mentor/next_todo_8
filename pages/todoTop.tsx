@@ -1,6 +1,5 @@
 import React from 'react'
-import { Heading, Box, TableContainer, Table, Flex, Text, Spacer, HStack} from "@chakra-ui/react";
-
+import { Box, TableContainer, Table, Flex, Text, Spacer, HStack} from "@chakra-ui/react";
 import { DoingButton } from "../components/atoms/buttons/DoingButton";
 import { DoneButton } from "../components/atoms/buttons/DoneButton";
 import { NotStartedButton } from "../components/atoms/buttons/NotStartedButton";
@@ -14,16 +13,12 @@ import SerchInputArea from '../components/atoms/serchInputArea/SerchInputArea';
 import FooterNumberButton from '../components/atoms/footerButton/FooterNumberButton';
 import FooterNumberPlusButton from '../components/atoms/footerButton/FooterNumberPlusButton';
 import FooterNumberMinusButton from '../components/atoms/footerButton/FooterNumberMinusButton';
+import { Header } from '../components/organisms/Header';
 
 const todoTop = () => {
   return (
     <>
-      {/* ヘッダーコンポーネントがマージされたら書き換える */}
-      <Box px={10} py={5} bg="#95E3F4">
-        <Heading ml={10}>TODO</Heading>
-      </Box>
-      {/* ここまで */}
-
+      <Header />
       <Flex  justify='center' align='center'>
         <Flex w="1080px" m="16px 0px">
           <Text fontSize="28px" fontWeight="700">TODO LIST</Text>

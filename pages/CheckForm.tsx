@@ -9,16 +9,16 @@ import RoundedCornersTextBox from "../components/atoms/forms/RoundedCornersTextB
 const CheckForm = () => {
   return (
     <>
-    
-    <Flex  justify="center" align="center" direction="column" backgroundColor={"gray.400"}>
-
-      <Stack spacing={9} mt={9} mb={9}>
-        <TitleForm/>
-        <TextBox/>
-        <TextBox2/>
-        <TextBox3/>
-        <TextSmallBox/>
-      </Stack>
+      <Flex  justify="center" align="center" direction="column" backgroundColor={"gray.400"}>
+        <Stack spacing={9} mt={9} mb={9}>
+          <TitleForm/>
+          <TextBox/>
+          <TextBox2/>
+          <TextBox3/>
+          <TextSmallBox/>
+        </Stack>
+      </Flex>
+      
       <Flex justify="center" align="center" direction="column" backgroundColor={"gray.400"}>
         <Stack spacing={9} mt={9} mb={9}>
           <TitleForm />

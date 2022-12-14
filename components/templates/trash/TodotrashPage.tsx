@@ -2,10 +2,10 @@ import { Box, Flex, Spacer, HStack, Center } from "@chakra-ui/react";
 import { DeleteAllButton } from "../../atoms/buttons/DeleteAllButton";
 import { RestoreAllButton } from "../../atoms/buttons/RestoreAllButton";
 import { BackButton } from "../../atoms/buttons/BackButton";
-import TodoTrash from "../../organisms/trash/TodoTrash";
 import { GreyButton, NumButtonFirst, NumButtonSecond, NumButtonPoint, NumButtonFifth, NumButtonSixth, WhiteButton } from "./NumButton";
+import { TodoTrash } from "../../organisms/Trash/TodoTrash";
 
-const TodotrashPage = () => {
+export const TodotrashPage = () => {
   return (
     <>
       <Box maxW="1280px" minW="1280px">
@@ -41,8 +41,10 @@ const TodotrashPage = () => {
             <BackButton />
           </HStack>
         </Flex>
+        
         <TodoTrash />
 
+        {/* Pagenation機能 実装後消去予定 */}
         <Center mt="96px" mb="24px">
         <HStack spacing="12px">
           <GreyButton />
@@ -58,4 +60,3 @@ const TodotrashPage = () => {
     </>
   );
 };
-export default TodotrashPage;

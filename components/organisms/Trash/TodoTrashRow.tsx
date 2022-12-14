@@ -1,11 +1,5 @@
 import React, { FC } from "react";
-import {
-  TableColumnHeaderProps,
-  TableBodyProps,
-  Tbody,
-  Td,
-  Tr,
-} from "@chakra-ui/react";
+import { TableColumnHeaderProps, TableBodyProps, Tbody, Td, Tr, Center } from "@chakra-ui/react";
 import PriorityButtonBox from "../../atoms/selectbox/PriorityButtonBox";
 import { RestoreButton } from "../../atoms/buttons/RestoreButton";
 import { DeleteButton } from "../../atoms/buttons/DeleteButton";
@@ -16,7 +10,7 @@ type Props = {
   create: any;
 };
 
-const TodoTrashRow: FC<Props> = (props) => {
+export const TodoTrashRow: FC<Props> = (props) => {
   const { task, status, create } = props;
 
   const TrashTbody = (props: TableBodyProps) => {
@@ -38,25 +32,37 @@ const TodoTrashRow: FC<Props> = (props) => {
       />
     );
   };
+
   return (
-    <>
-      <TrashTbody>
-        <Tr>
-          <TrashWhiteCell maxW="384px" minW="384px" >
+    <TrashTbody>
+      <Tr>
+        <TrashWhiteCell maxW="384px" minW="384px">
+          <Center>
             {task}
-          </TrashWhiteCell>
-          <TrashWhiteCell>{status}</TrashWhiteCell>
-          <TrashWhiteCell>
+          </Center>
+        </TrashWhiteCell>
+        <TrashWhiteCell>
+          <Center>
+            {status}
+          </Center>
+        </TrashWhiteCell>
+        <TrashWhiteCell>
+          <Center>
             <PriorityButtonBox />
-          </TrashWhiteCell>
-          <TrashWhiteCell>{create}</TrashWhiteCell>
-          <TrashWhiteCell> 
+          </Center>
+        </TrashWhiteCell>
+        <TrashWhiteCell>
+          <Center>
+            {create}
+          </Center>
+        </TrashWhiteCell>
+        <TrashWhiteCell>
+          <Center>
             <DeleteButton />
             <RestoreButton />
-          </TrashWhiteCell>
-        </Tr>
-      </TrashTbody>
-    </>
+          </Center>
+        </TrashWhiteCell>
+      </Tr>
+    </TrashTbody>
   );
 };
-export default TodoTrashRow;

@@ -8,7 +8,7 @@ import { DoneButton } from "../components/atoms/buttons/DoneButton";
 import { DraftButton } from "../components/atoms/buttons/DraftButton";
 import { GoogleLoginButton } from "../components/atoms/buttons/GoogleLoginButton";
 import { LoginButton } from "../components/atoms/buttons/LoginButton";
-import { NotStartedButto } from "../components/atoms/buttons/NotStartedButton";
+import { NotStartedButton } from "../components/atoms/buttons/NotStartedButton";
 import { ResetButton } from "../components/atoms/buttons/ResetButton";
 import { RestoreAllButton } from "../components/atoms/buttons/RestoreAllButton";
 import { SignUpButton } from "../components/atoms/buttons/SignUpButton";
@@ -22,7 +22,7 @@ const ConfirmationButton = () => {
   return (
     <>
       <Center mt={"4"}>
-        <NotStartedButto />
+        <NotStartedButton />
         <DoingButton />
         <DoneButton />
         <DeleteAllButton />

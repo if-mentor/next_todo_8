@@ -1,4 +1,5 @@
-import { Heading, Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex } from "@chakra-ui/react";
+import { Header } from "../components/organisms/Header";
 import { BackButton } from "../components/atoms/buttons/BackButton";
 import { CommentButton } from "../components/atoms/buttons/CommentButton";
 import CommentTable from "../components/atoms/commentTable/CommentTable";
@@ -8,8 +9,8 @@ const TodoDetailPage = () => {
   return (
     <>
       <Box bg="#95E3F4">
-        <Box w={"1080px"} m={"0 auto"} bg={"#95E3F4"} p={4}>
-          <Heading w={"100%"}>TODO</Heading>
+        <Box m={"0 auto"} bg={"#95E3F4"} p={4}>
+          <Header />
         </Box>
       </Box>
       <Box w={"1080px"} m={"0 auto"} px={5}>

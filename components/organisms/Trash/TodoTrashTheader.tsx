@@ -1,13 +1,7 @@
-import {
-  TableColumnHeaderProps,
-  TableHeadProps,
-  Thead,
-  Tr,
-  Th,
-} from "@chakra-ui/react";
-import { FC } from "react";
+import * as React from "react";
+import { TableColumnHeaderProps, TableHeadProps, Thead, Tr, Th, Center } from "@chakra-ui/react";
 
-const TodoTrashTheader: FC = () => {
+export const TodoTrashTheader: React.FC = () => {
   const TrashThead = (props: TableHeadProps) => {
     return (
       <Thead
@@ -23,13 +17,13 @@ const TodoTrashTheader: FC = () => {
   const TrashGreenCell = (props: TableColumnHeaderProps) => {
     return (
       <Th
-      w="174px"
-      textTransform="none"
-      fontFamily="Roboto"
-      fontSize="24px"
-      color="BlackAlpha.800"
-      p="12px 10px"
-      {...props}
+        w="174px"
+        textTransform="none"
+        fontFamily="Roboto"
+        fontSize="24px"
+        color="BlackAlpha.800"
+        p="12px 10px"
+        {...props}
       />
     );
   };
@@ -38,14 +32,23 @@ const TodoTrashTheader: FC = () => {
     <>
       <TrashThead>
         <Tr>
-          <TrashGreenCell w="384px">Task</TrashGreenCell>
-          <TrashGreenCell>Status</TrashGreenCell>
-          <TrashGreenCell>Priority</TrashGreenCell>
-          <TrashGreenCell>Create</TrashGreenCell>
-          <TrashGreenCell>Action</TrashGreenCell>
+          <TrashGreenCell w="384px">
+            <Center>Task</Center>
+          </TrashGreenCell>
+          <TrashGreenCell>
+            <Center>Status</Center>
+          </TrashGreenCell>
+          <TrashGreenCell>
+            <Center>Priority</Center>
+          </TrashGreenCell>
+          <TrashGreenCell>
+            <Center>Create</Center>
+          </TrashGreenCell>
+          <TrashGreenCell>
+            <Center>Action</Center>
+          </TrashGreenCell>
         </Tr>
       </TrashThead>
     </>
   );
 };
-export default TodoTrashTheader;

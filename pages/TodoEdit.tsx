@@ -1,5 +1,6 @@
-import { Box, FormControl, FormLabel, Input, Radio, RadioGroup, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
+import { Box, FormControl, FormLabel, Text } from '@chakra-ui/react'
+import { Header } from '../components/organisms/Header'
 import { BackButton } from '../components/atoms/buttons/BackButton'
 import { UpdateButton } from '../components/atoms/buttons/UpdateButton'
 import TextBox from '../components/atoms/Forms/TextBox'
@@ -8,23 +9,28 @@ import TitleForm from '../components/atoms/Forms/TitleForm'
 const TodoEdit = () => {
   return (
     <Box>
-      {/* headerコンポーネントをここに入れる */}
-      <Text>ヘッダー</Text>
-      <Box display={'flex'} justifyContent={'space-between'} marginLeft={100} marginRight={220}>
-        <Text fontSize={28} fontWeight={700}>EDIT TODO</Text>
+      <Header />
+      <Box w='1080px' m='36px auto 0' display={'flex'} justifyContent={'space-between'}>
+        <Text fontSize={28} fontWeight={700}>
+          EDIT TODO
+        </Text>
         <BackButton />
       </Box>
-      <FormControl marginLeft={100} marginRight={100}>
-        <FormLabel fontSize={24} fontWeight={700} display={'flex'}>TITLE</FormLabel>
+      <FormControl w='1080px' m='0 auto'>
+        <FormLabel fontSize={24} fontWeight={700}>
+          TITLE
+        </FormLabel>
         <TitleForm />
-        <FormLabel fontSize={24} fontWeight={700}>DETAIL</FormLabel>
+        <FormLabel fontSize={24} fontWeight={700}>
+          DETAIL
+        </FormLabel>
         <TextBox />
-        <Box marginRight={320} display={'flex'} justifyContent={'flex-end'}>
+        <Box mt={5} display={'flex'} justifyContent={'flex-end'}>
           <UpdateButton />
         </Box>
       </FormControl>
     </Box>
-    )
-}
+  );
+};
 
 export default TodoEdit

@@ -15,8 +15,9 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 
-const ModalTodoShow = () => {
+export const ModalTodoShow = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Button onClick={onOpen}>Open Modal</Button>
@@ -60,4 +61,3 @@ const ModalTodoShow = () => {
     </>
   );
 };
-export default ModalTodoShow;

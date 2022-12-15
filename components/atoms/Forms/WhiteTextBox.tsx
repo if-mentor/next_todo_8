@@ -1,6 +1,6 @@
 import TextArea from "./accessories/TextArea";
 
-const TextBox2 = () => {
+const WhiteTextBox = () => {
   return (
       <TextArea
         h="287px"
@@ -11,4 +11,4 @@ const TextBox2 = () => {
       />
   );
 };
-export default TextBox2;
+export default WhiteTextBox;

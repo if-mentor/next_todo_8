@@ -1,12 +1,11 @@
-import { Heading, Box, Center, Text } from "@chakra-ui/react";
+import { Center, Text } from "@chakra-ui/react";
+import { Header } from "../components/organisms/Header";
 import { TopButton } from "../components/atoms/buttons/TopButton";
 
 const Custom404 = () => {
   return (
     <>
-      <Box px={10} py={5} bg="#95E3F4">
-        <Heading ml={10}>TODO</Heading>
-      </Box>
+      <Header />
       <Center mt={"50px"}>
         <Text fontSize="64px" fontWeight={"bold"}>
           404

@@ -106,6 +106,7 @@ const todoTop = () => {
               <TemporaryToppageListLine
                 key={todo.id}
                 status={<DoingButton />} //仮でボタン
+                priority={todo.priority}
                 task={todo.text}
                 create={format(todo.createdAt.toDate(), 'yyyy-MM-dd HH:mm')}
                 update={format(todo.updateAt.toDate(), 'yyyy-MM-dd HH:mm')}

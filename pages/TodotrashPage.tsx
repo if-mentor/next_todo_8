@@ -1,12 +1,12 @@
 import { Box, Flex, Spacer, HStack, Center } from "@chakra-ui/react";
-import { DeleteAllButton } from "../../atoms/buttons/DeleteAllButton";
-import { RestoreAllButton } from "../../atoms/buttons/RestoreAllButton";
-import { BackButton } from "../../atoms/buttons/BackButton";
-import { GreyButton, NumButtonFirst, NumButtonSecond, NumButtonPoint, NumButtonFifth, NumButtonSixth, WhiteButton } from "./NumButton";
-import { TodoTrash } from "../../organisms/Trash/TodoTrash";
-import { Header } from "../../organisms/Header";
+import { DeleteAllButton } from "../components/atoms/buttons/DeleteAllButton";
+import { RestoreAllButton } from "../components/atoms/buttons/RestoreAllButton";
+import { BackButton } from "../components/atoms/buttons/BackButton";
+import { GreyButton, NumButtonFirst, NumButtonSecond, NumButtonPoint, NumButtonFifth, NumButtonSixth, WhiteButton } from "../components/templates/trash/NumButton";
+import { TodoTrash } from "../components/organisms/Trash/TodoTrash";
+import { Header } from "../components/organisms/Header";
 
-export const TodotrashPage = () => {
+const TodotrashPage = () => {
   return (
     <>
       <Box>
@@ -51,3 +51,5 @@ export const TodotrashPage = () => {
     </>
   );
 };
+
+export default TodotrashPage;

@@ -49,7 +49,8 @@ const SignUp = () => {
                 <Center>
                   <RoundedCornersTextBox
                     inputText={email}
-                    changeInputText={handleChangeEmail}/>
+                    changeInputText={handleChangeEmail}
+                  />
                 </Center>
               </Box>
               <Box mb={"40px"}>
@@ -61,7 +62,9 @@ const SignUp = () => {
                 <Center>
                   <RoundedCornersTextBox
                     inputText={password}
-                    changeInputText={handleChangePassword}/>
+                    changeInputText={handleChangePassword}
+                    type={'password'}
+                  />
                 </Center>
               </Box>
               <Center mb={"40px"}>

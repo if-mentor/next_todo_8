@@ -1,6 +1,13 @@
 import { Button } from "@chakra-ui/react";
+import { deleteDoc, doc } from "firebase/firestore";
+import { db } from "../../../firebase";
 
 export const DeleteButton= () => {
+  // firebaseから削除する
+  const handleDeleteTodo = () => {
+    console.log("削除ボタンを押しました")
+    // deleteDoc(doc(db, "todos", e))
+  }
   return (
     <Button
       _hover={{ bg: "#E28F84" }}
@@ -11,6 +18,7 @@ export const DeleteButton= () => {
       w={"80px"}
       fontSize={"18px"}
       fontWeight={'bold'}
+      onClick={() => handleDeleteTodo()}
     >
       Delete
     </Button>

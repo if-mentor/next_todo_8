@@ -15,7 +15,6 @@ const Login = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    debugger
     await signInWithEmailAndPassword(auth, email, password).then(() => {
       router.push("/")
     }).catch((err) => {

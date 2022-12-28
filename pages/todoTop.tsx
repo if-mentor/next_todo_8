@@ -95,12 +95,6 @@ const todoTop = () => {
           <Table variant="simple">
             {/* #20-Add-Toppage-List-Lineがマージされたら書き換える */}
             <TemporaryToppageListHead />
-            <TemporaryToppageListLine
-              status={<DoingButton />}
-              task="ReactでTodoサイトを作成する"
-              create="2022-10-11 12:12"
-              update="2022-12-14 12:12"
-            />
 
             {todos.map((todo) => (
               <TemporaryToppageListLine

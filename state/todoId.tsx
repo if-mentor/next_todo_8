@@ -1,7 +1,7 @@
 import { atom } from "recoil";
 
 export interface ItodoId {
-  docId: number;
+  docId: string;
   editFlg: boolean;
 }
 
@@ -12,7 +12,7 @@ export const todoId = atom<ItodoId[]> ({
   default:
     [
       {
-        docId: 0,
+        docId: '',
         editFlg:false
       }
     ]

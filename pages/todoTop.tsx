@@ -27,7 +27,6 @@ import type {Todo} from '../types/Todo'
 
 const todoTop = () => {
   const todos = setFirebaseData()
-  console.log(todos)
   return (
     <>
       <Header/>

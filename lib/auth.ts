@@ -16,7 +16,7 @@ export const useAuth = (): boolean => {
   const setUser = useSetRecoilState(userState);
 
   useEffect(() => {
-    return onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, (user) => {
       setUser(user)
       setIsLoading(false)
     })

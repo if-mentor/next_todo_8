@@ -14,6 +14,7 @@ export const LoginButton = () => {
       h={'54px'}
       color={"#F0FCFF"}
       fontWeight={"bold"}
+      type={'submit'}
     >
       LOGIN
     </Button>

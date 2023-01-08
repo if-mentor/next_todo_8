@@ -5,7 +5,7 @@ import {useEffect, useState} from "react";
 
 type UserState = User | null;
 
-const userState = atom<UserState>({
+export const userState = atom<UserState>({
   key: "userState",
   default: null,
   dangerouslyAllowMutability: true,
@@ -23,6 +23,3 @@ export const useAuth = (): boolean => {
   }, [setUser]);
   return isLoading;
 }
-export const useUser = (): UserState => {
-  return useRecoilValue(userState);
-};

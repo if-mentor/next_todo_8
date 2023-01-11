@@ -1,4 +1,4 @@
-import { Button, Icon } from "@chakra-ui/react";
+import { Icon } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import { BsPencil } from "react-icons/bs";

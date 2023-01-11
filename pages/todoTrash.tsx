@@ -1,14 +1,64 @@
-import { Box, Flex, Spacer, HStack, Center } from "@chakra-ui/react";
+import React, { useEffect, useState } from 'react';
+
+import {
+  Box,
+  TableContainer,
+  Table,
+  Flex,
+  Text,
+  Spacer,
+  HStack,
+} from '@chakra-ui/react';
 import { BackButton } from "../components/atoms/buttons/BackButton";
 import { DeleteAllButton } from "../components/atoms/buttons/DeleteAllButton";
 import { RestoreAllButton } from "../components/atoms/buttons/RestoreAllButton";
 import { Header } from "../components/organisms/Header";
 import { TodoTrash } from "../components/organisms/Trash/TodoTrash";
 import { GreyButton, NumButtonFirst, NumButtonSecond, NumButtonPoint, NumButtonFifth, NumButtonSixth, WhiteButton } from "../components/templates/trash/NumButton";
+import { collection, CollectionReference, onSnapshot, Timestamp } from 'firebase/firestore';
+import { db } from '../firebase';
+import { TodoTrashTheader } from '../components/organisms/Trash/TodoTrashTheader';
+import { TodoTrashRow } from '../components/organisms/Trash/TodoTrashRow';
+import { DoingButton } from '../components/atoms/buttons/DoingButton';
 
 
+import { format } from 'date-fns';
+import FooterNumberMinusButton from '../components/atoms/footerButton/FooterNumberMinusButton';
+import FooterNumberButton from '../components/atoms/footerButton/FooterNumberButton';
+import FooterNumberPlusButton from '../components/atoms/footerButton/FooterNumberPlusButton';
 
-export const TodotrashPage = () => {
+type Todos = {
+  id: string;
+  createdAt: Timestamp;
+  detail: string;
+  priority: string;
+  status: string;
+  text: string;
+  updateAt: Timestamp;
+  trash: boolean;
+};
+
+const todoTrash = () => {
+  const [todos, setTodos] = useState<Array<Todos>>([]);
+  
+  useEffect(() => {
+    //データの取得
+    const postData = collection(db, 'todos') as CollectionReference<Todos>;
+    
+    //リアルタイムでデータを取得する。
+    onSnapshot(postData, (todo) => {
+      setTodos(todo.docs.map((doc) => ({ ...doc.data() })));
+    });
+  }, []);
+  
+
+  const [trashTodos, setTrashTodos] = useState<Array<Todos>>([...todos]);
+  useEffect(() => {
+    setTrashTodos(todos.filter((todo:any) => {
+      return todo.trash === true
+    }))
+  }, [todos])
+
   return (
     <>
       <Box>
@@ -35,21 +85,41 @@ export const TodotrashPage = () => {
           </HStack>
         </Flex>
         
-        <TodoTrash />
+        <Flex justify="center" align="center">
+        <TableContainer w="1080px">
+          <Table variant="simple">
+            {/* #20-Add-Toppage-List-Lineがマージされたら書き換える */}
+            {/* <TemporaryToppageListHead /> */}
+            <TodoTrashTheader />
 
-        {/* Pagenation機能 実装後消去予定 */}
-        <Center mt="96px" mb="24px">
-        <HStack spacing="12px">
-          <GreyButton />
-          <NumButtonFirst />
-          <NumButtonSecond/>
-          <NumButtonPoint/>
-          <NumButtonFifth/>
-          <NumButtonSixth/>
-          <WhiteButton/>
-        </HStack>
-        </Center>
+            {trashTodos.map((todo) => (
+              <TodoTrashRow
+              // <TemporaryToppageListLine
+                key={todo.id}
+                status={<DoingButton />} //仮でボタン
+                priority={todo.priority}
+                task={todo.text}
+                trash={todo.trash}
+                create={format(todo.createdAt.toDate(), 'yyyy-MM-dd HH:mm')}
+                update={format(todo.updateAt.toDate(), 'yyyy-MM-dd HH:mm')}
+                id={todo.id}
+              />
+            ))}
+            {/* ここまで */}
+          </Table>
+        </TableContainer>
+      </Flex>
+      <Flex justify="center" align="center">
+        <FooterNumberMinusButton />
+        <FooterNumberButton footerNum={1} />
+        <FooterNumberButton footerNum={2} />
+        <FooterNumberButton footerNum="..." />
+        <FooterNumberButton footerNum={4} />
+        <FooterNumberButton footerNum={5} />
+        <FooterNumberPlusButton />
+      </Flex>
       </Box>
     </>
   );
 };
+export default todoTrash;

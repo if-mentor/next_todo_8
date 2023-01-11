@@ -1,6 +1,6 @@
 import { Box, Icon } from '@chakra-ui/react'
 import React from 'react'
-import { FaTrashRestoreAlt } from 'react-icons/Fa'
+import { FaTrashRestoreAlt } from 'react-icons/fa'
 
 const TrashIcon = () => {
   return (

@@ -29,7 +29,7 @@ import {
 } from 'firebase/firestore';
 import { format } from 'date-fns';
 import ToppageListHead from '../components/organisms/ToppageListHead';
-import ToppageListLine from '../components/organisms/ToppageListLine';
+// import ToppageListLine from '../components/organisms/ToppageListLine';
 
 type Todos = {
   id: string;
@@ -113,8 +113,7 @@ const todoTop = () => {
             <ToppageListHead />
 
             {filterTodos.map((todo) => (
-              <ToppageListLine
-              // <TemporaryToppageListLine
+              <TemporaryToppageListLine
                 key={todo.id}
                 status={<DoingButton />} //仮でボタン
                 priority={todo.priority}

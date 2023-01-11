@@ -10,9 +10,11 @@ type Props = {
   priority: string
   create: any,
   update: any,
+  trash: boolean,
+  id: string,
 }
 
-const temporaryToppageListLine = ({task, status, priority, create, update}:Props) => {
+const temporaryToppageListLine = ({task, status, priority, create, update,trash,id}:Props) => {
   return (
     <>
       <Tbody>

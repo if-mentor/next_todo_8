@@ -30,5 +30,3 @@ const ToppageListLine = ({task, status, priority, create, update,trash,id}:Props
     </>
   )
 }
-
-export default ToppageListLine

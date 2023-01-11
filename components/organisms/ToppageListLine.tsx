@@ -14,7 +14,7 @@ type Props = {
   id: string,
 }
 
-const temporaryToppageListLine = ({task, status, priority, create, update,trash,id}:Props) => {
+const ToppageListLine = ({task, status, priority, create, update,trash,id}:Props) => {
   return (
     <>
       <Tbody>
@@ -24,10 +24,9 @@ const temporaryToppageListLine = ({task, status, priority, create, update,trash,
           <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center><PriorityButtonBox priority={priority}/></Center></Td>
           <Td fontSize="14px" fontWeight="700" p={"16px 0px"}><Center>{create}</Center></Td>
           <Td fontSize="14px" fontWeight="700" p={"16px 0px"}><Center>{update}</Center></Td>
-          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center><ActionIconEdit />　<ActionIconDelete></ActionIconDelete></Center></Td>
+          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center><ActionIconEdit/>　<ActionIconDelete /></Center></Td>
         </Tr>
       </Tbody>
     </>
   )
 }
-export default temporaryToppageListLine

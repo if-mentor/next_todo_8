@@ -28,29 +28,44 @@ import {
   onSnapshot,
 } from 'firebase/firestore';
 import { format } from 'date-fns';
+import ToppageListHead from '../components/organisms/ToppageListHead';
+// import ToppageListLine from '../components/organisms/ToppageListLine';
 
 type Todos = {
-  id: number;
+  id: string;
   createdAt: Timestamp;
   detail: string;
   priority: string;
   status: string;
   text: string;
   updateAt: Timestamp;
+  trash: boolean;
 };
 
 const todoTop = () => {
   const [todos, setTodos] = useState<Array<Todos>>([]);
-
+  
   useEffect(() => {
     //データの取得
     const postData = collection(db, 'todos') as CollectionReference<Todos>;
-
+    
     //リアルタイムでデータを取得する。
     onSnapshot(postData, (todo) => {
       setTodos(todo.docs.map((doc) => ({ ...doc.data() })));
     });
   }, []);
+  
+
+  const [filterTodos, setFilterTodos] = useState<Array<Todos>>([...todos]);
+  useEffect(() => {
+    setFilterTodos(todos.filter((todo:any) => {
+      return todo.trash === false
+    }))
+  }, [todos])
+  console.log("todos:",todos)
+  console.log("filterTodos:",filterTodos);
+
+
   return (
     <>
       <Header />
@@ -94,16 +109,19 @@ const todoTop = () => {
         <TableContainer w="1080px">
           <Table variant="simple">
             {/* #20-Add-Toppage-List-Lineがマージされたら書き換える */}
-            <TemporaryToppageListHead />
+            {/* <TemporaryToppageListHead /> */}
+            <ToppageListHead />
 
-            {todos.map((todo) => (
+            {filterTodos.map((todo) => (
               <TemporaryToppageListLine
                 key={todo.id}
                 status={<DoingButton />} //仮でボタン
                 priority={todo.priority}
                 task={todo.text}
+                trash={todo.trash}
                 create={format(todo.createdAt.toDate(), 'yyyy-MM-dd HH:mm')}
                 update={format(todo.updateAt.toDate(), 'yyyy-MM-dd HH:mm')}
+                id={todo.id}
               />
             ))}
             {/* ここまで */}

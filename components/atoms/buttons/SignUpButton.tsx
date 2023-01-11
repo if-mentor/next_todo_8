@@ -12,6 +12,7 @@ export const SignUpButton = () => {
       h={"54px"}
       color={"#F0FCFF"}
       fontWeight={"bold"}
+      type={'submit'}
     >
       SIGN UP
     </Button>

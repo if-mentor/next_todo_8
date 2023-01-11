@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   Box,
   TableContainer,
@@ -7,30 +7,30 @@ import {
   Text,
   Spacer,
   HStack,
-} from '@chakra-ui/react';
-import { DoingButton } from '../components/atoms/buttons/DoingButton';
-import TemporaryToppageListHead from '../components/temporaryComponents/TemporaryToppageListHead';
-import TemporaryToppageListLine from '../components/temporaryComponents/TemporaryToppageListLine';
-import TrashIcon from '../components/atoms/icons/TrashIcon';
-import DraftIcon from '../components/atoms/icons/DraftIcon';
-import TextAreaBox from '../components/atoms/selectbox/TextAreaBox';
-import { ResetButton } from '../components/atoms/buttons/ResetButton';
-import SerchInputArea from '../components/atoms/serchInputArea/SerchInputArea';
-import FooterNumberButton from '../components/atoms/footerButton/FooterNumberButton';
-import FooterNumberPlusButton from '../components/atoms/footerButton/FooterNumberPlusButton';
-import FooterNumberMinusButton from '../components/atoms/footerButton/FooterNumberMinusButton';
-import { Header } from '../components/organisms/Header';
-import { db } from '../firebase';
+} from "@chakra-ui/react";
+import { DoingButton } from "../components/atoms/buttons/DoingButton";
+import TemporaryToppageListHead from "../components/temporaryComponents/TemporaryToppageListHead";
+import TemporaryToppageListLine from "../components/temporaryComponents/TemporaryToppageListLine";
+import TrashIcon from "../components/atoms/icons/TrashIcon";
+import DraftIcon from "../components/atoms/icons/DraftIcon";
+import TextAreaBox from "../components/atoms/selectbox/TextAreaBox";
+import { ResetButton } from "../components/atoms/buttons/ResetButton";
+import SerchInputArea from "../components/atoms/serchInputArea/SerchInputArea";
+import FooterNumberButton from "../components/atoms/footerButton/FooterNumberButton";
+import FooterNumberPlusButton from "../components/atoms/footerButton/FooterNumberPlusButton";
+import FooterNumberMinusButton from "../components/atoms/footerButton/FooterNumberMinusButton";
+import { Header } from "../components/organisms/Header";
+import { db } from "../firebase";
 import {
   collection,
   CollectionReference,
   Timestamp,
   onSnapshot,
-} from 'firebase/firestore';
-import { format } from 'date-fns';
+} from "firebase/firestore";
+import { format } from "date-fns";
 
 type Todos = {
-  id: number;
+  id: string;
   createdAt: Timestamp;
   detail: string;
   priority: string;
@@ -44,7 +44,7 @@ const todoTop = () => {
 
   useEffect(() => {
     //データの取得
-    const postData = collection(db, 'todos') as CollectionReference<Todos>;
+    const postData = collection(db, "todos") as CollectionReference<Todos>;
 
     //リアルタイムでデータを取得する。
     onSnapshot(postData, (todo) => {
@@ -102,8 +102,10 @@ const todoTop = () => {
                 status={<DoingButton />} //仮でボタン
                 priority={todo.priority}
                 task={todo.text}
-                create={format(todo.createdAt.toDate(), 'yyyy-MM-dd HH:mm')}
-                update={format(todo.updateAt.toDate(), 'yyyy-MM-dd HH:mm')}
+                create={format(todo.createdAt.toDate(), "yyyy-MM-dd HH:mm")}
+                update={format(todo.updateAt.toDate(), "yyyy-MM-dd HH:mm")}
+                // create時にuuidもデータベースに保存してもらう事前提
+                id={todo.id}
               />
             ))}
             {/* ここまで */}

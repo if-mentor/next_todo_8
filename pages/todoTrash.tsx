@@ -13,7 +13,6 @@ import { BackButton } from "../components/atoms/buttons/BackButton";
 import { DeleteAllButton } from "../components/atoms/buttons/DeleteAllButton";
 import { RestoreAllButton } from "../components/atoms/buttons/RestoreAllButton";
 import { Header } from "../components/organisms/Header";
-import { TodoTrash } from "../components/organisms/Trash/TodoTrash";
 import { GreyButton, NumButtonFirst, NumButtonSecond, NumButtonPoint, NumButtonFifth, NumButtonSixth, WhiteButton } from "../components/templates/trash/NumButton";
 import { collection, CollectionReference, onSnapshot, Timestamp } from 'firebase/firestore';
 import { db } from '../firebase';

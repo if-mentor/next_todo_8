@@ -39,7 +39,7 @@ export const DeleteAllButton = () => {
 
   // idを取得方法が判明したら編集
   // firebaseから削除する関数
-  const handleDeleteAllTodo = ()=>{
+  const handleDeleteAllTodo = (e:any)=>{
     filterTodos.map((id) => 
     deleteDoc(doc(db, "todos",id.id))
   )}

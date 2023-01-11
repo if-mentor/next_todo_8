@@ -15,15 +15,21 @@ export const UpdateButton = () => {
   const editTodo = async () => {
     const docRef = doc(db, "todos", editTarget);
     //フォームに入力があれば更新する
+    //タイトル
     if (todoTitle !== "") {
       await updateDoc(docRef, {
-        title: todoTitle,
-        updateAt: serverTimestamp(),
+        text: todoTitle,
       });
     }
+    //内容
     if (todoDetail !== "") {
       await updateDoc(docRef, {
         detail: todoDetail,
+      });
+    }
+    //更新時間
+    if (todoDetail !== "" || todoTitle !== "") {
+      await updateDoc(docRef, {
         updateAt: serverTimestamp(),
       });
     }

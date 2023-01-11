@@ -31,6 +31,8 @@ export const CreateButton = () => {
       priority:priorityValue,
       createdAt: serverTimestamp(),
       updateAt: serverTimestamp(),
+      id:docId,
+      trash:false,
     };
     await setDoc(docRef ,data);
     // 送信したらTopページに戻る

@@ -2,10 +2,11 @@ import { Button } from "@chakra-ui/react";
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../../firebase";
 
-// idの取得方法が判明したら変更↓
-const id ="daaxwBhgR5yWyZ9l1bKs"
+type Props = {
+  id: string,
+}
 
-export const DeleteButton= () => {
+export const DeleteButton= ({id}:Props) => {
   // firebaseから削除する関数
   const handleDeleteTodo = (e:any) => {
     deleteDoc(doc(db, "todos",e));

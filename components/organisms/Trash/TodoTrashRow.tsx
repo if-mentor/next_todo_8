@@ -24,8 +24,7 @@ export const TodoTrashRow: FC<Props> = ({task, status, priority, create, update,
           <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center>{status}</Center></Td>
           <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center><PriorityButtonBox priority={priority}/></Center></Td>
           <Td fontSize="14px" fontWeight="700" p={"16px 0px"}><Center>{create}</Center></Td>
-          {/* <Td fontSize="14px" fontWeight="700" p={"16px 0px"}><Center>{update}</Center></Td> */}
-          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center><DeleteButton />　<RestoreButton /></Center></Td>
+          <Td fontSize="16px" fontWeight="700" p={"16px 10px"}><Center><DeleteButton id={id}/>　<RestoreButton id={id}/></Center></Td>
         </Tr>
       </Tbody>
     </>

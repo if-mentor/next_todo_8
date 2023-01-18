@@ -35,11 +35,10 @@ export const RestoreAllButton = () => {
     }))
   }, [todos])
 
-  // idを取得方法が判明したら編集(id.idのところを)
-  // firebaseから削除する関数
+  // todoTrashにあるTODOを、すべてtodoTopに戻す関数
   const handleRestoreAllTodo = ()=>{
-    filterTodos.map((id) => 
-    updateDoc((doc(db, "todos", id.id)), {
+    filterTodos.map((e) => 
+    updateDoc((doc(db, "todos", e.id)), {
       trash: false
     })
   )}

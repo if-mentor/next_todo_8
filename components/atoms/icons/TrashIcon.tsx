@@ -8,7 +8,6 @@ const TrashIcon = () => {
       display='flex'
       justifyContent='center'
       alignItems='center'
-
       w='40px'
       h='40px'
       border='1px solid #B5B5B5'
@@ -19,6 +18,7 @@ const TrashIcon = () => {
         as={FaTrashRestoreAlt}
         w='14px' 
         h='18px'
+        cursor="pointer"
       />
     </Box>
   )

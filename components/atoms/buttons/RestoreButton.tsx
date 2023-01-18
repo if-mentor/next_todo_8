@@ -2,12 +2,14 @@ import { Button } from "@chakra-ui/react";
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../../firebase";
 
-export const RestoreButton = () => {
+type Props = {
+  id: string,
+}
+
+export const RestoreButton = ({id}:Props) => {
 
   const handleRestoreTodo = () => {
-    // idの取得方法が判明したら変更
-    const docEdit = doc(db, "todos", "8a776cd8-9565-4cc0-8f92-f0d6a18a0eac");
-    
+    const docEdit = doc(db, "todos", id);
     updateDoc(docEdit, {
       trash: false
     })

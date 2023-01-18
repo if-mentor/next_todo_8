@@ -6,15 +6,18 @@ import { useRecoilState } from 'recoil'
 import { db } from '../../../firebase'
 import { todoTrashState } from '../../../state/todoTrashState'
 
-const ActionIconDelete = () => {
-  // const [trashState, setTrashState] = useRecoilState(todoTrashState);
+type Props = {
+  id: string,
+}
+
+const ActionIconDelete = ({id}:Props) => {
+  const [trashState, setTrashState] = useRecoilState(todoTrashState);
   const handleTrashTodo = () => {
-    // idの取得方法が判明したら変更
-    const docEdit = doc(db, "todos", "8a776cd8-9565-4cc0-8f92-f0d6a18a0eac");
+    const docEdit = doc(db, "todos", id);
     updateDoc(docEdit, {
       trash: true
     })
-    // setTrashState(true);
+    setTrashState(true);
   }
   
   return (
